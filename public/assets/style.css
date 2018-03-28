@@ -5,12 +5,25 @@
 
 #brand-link {
     color: whitesmoke;
+    margin-left: 5%;
 }
 
 #theBod {
     font-family: 'Mandali', sans-serif;
     color: grey;
     background-color: rgb(224, 224, 224);
+}
+
+#dashBtn,#settingsBtn {
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+}
+
+#dashBtn:hover,#settingsBtn:hover {
+    background-color: steelblue;
+    color: whitesmoke;
 }
 
 ul {
@@ -24,7 +37,7 @@ a {
 a:hover {
     color: grey;
     text-decoration: none;
-}
+}   
 
 .headBtn {
     border-right:solid;
@@ -32,3 +45,4 @@ a:hover {
     border-width: 1px;
     background-color:white;
 }
+
