@@ -5,17 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Etherfeld</title>
+    <link rel="shortcut icon" href="assets/images/wheat_fav.png">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg" id="headPiece">
+<body id="theBod">
+
+    <nav class="navbar navbar-expand-lg" id="navPiece">
         <a class="navbar-brand" id="brand-link" href="#"><h1>Etherfeld</h1></a>
     </nav>
 
+    <header class="container-flex text-center pt-2 " id="headPiece">
+        <div class="row">
+            <div class="col-lg-6 p-3 headBtn rounded-left">
+                <a href="">
+                    <h5>Dashboard</h5>
+                </a>
+            </div>
+            <div class="col-lg-6 p-3 headBtn rounded-right">
+                <a href="">
+                    <h5>Settings</h5>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- <h5>Your one stop to everything Cryptocurrency. From the customizable dashboard to 
+            transaction storing, we have you covered.</h5> -->
 
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="assets/app.js"></script>
