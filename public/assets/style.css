@@ -1,3 +1,11 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 #navPiece {
     background-color: rgb(122, 122, 1);
     color: whitesmoke;
@@ -21,9 +29,28 @@
     border-radius: 0;
 }
 
-#dashBtn:hover,#settingsBtn:hover {
+#dashBtn:hover,#settingsBtn:hover,.cryptoBtn:hover {
     background-color: steelblue;
     color: whitesmoke;
+}
+
+.cryptoBtn-2:hover {
+    border: 1px solid grey;
+}
+
+#dashTab,#cryptoTab {
+    background-color: whitesmoke;
+    margin-top: 1em;
+    padding:0;
+}
+
+#allCrypts {
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+#plusSign {
+    height:20px
 }
 
 ul {
@@ -44,5 +71,18 @@ a:hover {
     border-color: grey;
     border-width: 1px;
     background-color:white;
+}
+
+.cryptoBtn {
+    padding: 10px !important;
+    margin: 0 !important;
+    border-radius: 0;
+}
+
+.cryptoBtn-2 {
+    padding: 10px !important;
+    margin: 0 !important;
+    border-radius: 0;
+    width:15%
 }
 
