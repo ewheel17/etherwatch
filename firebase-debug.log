@@ -1,0 +1,33 @@
+[debug] [2018-03-29T20:48:39.926Z] ----------------------------------------------------------------------
+[debug] [2018-03-29T20:48:39.931Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ewhee\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-03-29T20:48:39.931Z] CLI Version:   3.17.7
+[debug] [2018-03-29T20:48:39.932Z] Platform:      win32
+[debug] [2018-03-29T20:48:39.932Z] Node Version:  v8.9.3
+[debug] [2018-03-29T20:48:39.933Z] Time:          Thu Mar 29 2018 14:48:39 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-03-29T20:48:39.933Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-29T20:48:39.989Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-29T20:48:39.991Z] > authorizing via signed-in user
+[debug] [2018-03-29T20:48:39.997Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/etherwatch-1659d  
+  
+ Thu Mar 29 2018 14:48:39 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-03-29T20:48:40.654Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-29T20:48:40.657Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/etherwatch-1659d/tokens  
+  
+ Thu Mar 29 2018 14:48:40 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-03-29T20:48:41.282Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-29T20:48:41.285Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/etherwatch-1659d  
+  
+ Thu Mar 29 2018 14:48:41 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-03-29T20:48:42.203Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\ewhee\Documents\GitHub\personal_projects\etherwatch'...
+[info] 
+[debug] [2018-03-29T20:48:42.215Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/595784562003/clients/_:getWebAppConfig  
+  
+ Thu Mar 29 2018 14:48:42 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-03-29T20:48:42.715Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
