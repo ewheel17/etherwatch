@@ -32,15 +32,44 @@
 
     <main class="container-flex" id="cryptoTab">
         <div class="btn-group btn-block" id="allCrypts">
-            <a href="" class="btn btn-block cryptoBtn" id=""><h5>Bitcoin</h5></a>
-            <a href="" class="btn btn-block cryptoBtn" id=""><h5>Ethereum</h5></a>
-            <a href="" class="btn btn-block cryptoBtn" id=""><h5>Litecoin</h5></a>
-            <a href="" class="btn btn-block cryptoBtn-2" id=""><img id="plusSign" src="assets/images/plus-sign.png"></a>
+            <a class="btn btn-block cryptoBtn" id="Over-Btn"><h5>Overview</h5></a>
+            <a class="btn btn-block cryptoBtn" id="BTC-Btn"><h5>Bitcoin</h5></a>
+            <a class="btn btn-block cryptoBtn" id="ETH-Btn"><h5>Ethereum</h5></a>
+            <a class="btn btn-block cryptoBtn" id="LTC-Btn"><h5>Litecoin</h5></a>
+            <a class="btn btn-block cryptoBtn-2" id=""><img id="plusSign" src="assets/images/plus-sign.png"></a>
         </div>
 
-        <section class="row pl-3">
+        <section class="row pl-3 p-4" id="Over-Tab">
+            <div class="col-lg-12">
+                <h3>Overview</h3>
+                <hr>
+                <div id="Over-BTC"></div>
+                <div id="Over-ETH"></div>
+                <div id="Over-LTC"></div>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="BTC-Tab">
             <div class="col-lg-12">
                 <h3>Bitcoin</h3>
+                <hr>
+                <div id="BTC-USD"></div>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="ETH-Tab">
+            <div class="col-lg-12">
+                <h3>Ethereum</h3>
+                <hr>
+                <span id="ETH-USD"></span>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="LTC-Tab">
+            <div class="col-lg-12">
+                <h3>Litecoin</h3>
+                <hr>
+                <div id="LTC-USD"></div>
             </div>
         </section>
     </main>

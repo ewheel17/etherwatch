@@ -15,25 +15,80 @@ var currencies = [
     'ETH-USD',
     'LTC-USD'
 ]
-var queryURL = 'https://api.coinbase.com/v2/prices/' + currencies[0] + '/spot';
+var queryURL = '';
 var priceList = [];
 var theValue;
 var allValues = [];
+var BTC_Val;
+var ETH_Val;
+var LTC_Val;
 
-function runQuery(queryURL) {
-    for (i in currencies) {
-        queryURL = 'https://api.coinbase.com/v2/prices/' + currencies[i] + '/spot';
+function runQuery() {
+    $.ajax({ 
+        url: 'https://api.coinbase.com/v2/prices/' + currencies[0] + '/spot', 
+        method: "GET" 
+    }).then(function(coinData) {
+        BTC_Val = coinData.data.amount;
+        $('#Over-BTC').html('<h5>Bitcoin: $' + coinData.data.amount + '</h5>')
+    });
 
-        $.ajax({ 
-            url: queryURL, 
-            method: "GET" 
-        }).then(function(coinData) {
-            theValue = coinData.data.amount;
-            allValues.push(theValue);
-            console.log(theValue);
-        });
+    $.ajax({ 
+        url: 'https://api.coinbase.com/v2/prices/' + currencies[1] + '/spot', 
+        method: "GET" 
+    }).then(function(coinData) {
+        ETH_Val = coinData.data.amount;
+        $('#Over-ETH').html('<h5>Etherium: $' + coinData.data.amount + '</h5>' )
+    });
+
+    $.ajax({ 
+        url: 'https://api.coinbase.com/v2/prices/' + currencies[2] + '/spot', 
+        method: "GET" 
+    }).then(function(coinData) {
+        LTC_Val = coinData.data.amount;
+        $('#Over-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
+    });
+
     }
-};
 
-runQuery(queryURL);
+
+
+$(document).ready(function() {
+    runQuery();
+    console.log('Get lost Alec!')
+
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").hide();
+    $("#LTC-Tab").hide();
+});
+
+$('#Over-Btn').click(function(){
+    $('#Over-Tab').show();
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").hide();
+    $("#LTC-Tab").hide();
+})
+
+$('#BTC-Btn').click(function(){
+    $('#BTC-USD').html('<h2>$ '+ BTC_Val + '</h2>');
+    $('#Over-Tab').hide();
+    $("#BTC-Tab").show();
+    $("#ETH-Tab").hide();
+    $("#LTC-Tab").hide();
+})
+
+$('#ETH-Btn').click(function(){
+    $('#ETH-USD').html('<h2>$ '+ ETH_Val + '</h2>')
+    $('#Over-Tab').hide();
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").show();
+    $("#LTC-Tab").hide();
+})
+
+$('#LTC-Btn').click(function(){
+    $('#LTC-USD').html('<h2>$ '+ LTC_Val + '</h2>')
+    $('#Over-Tab').hide();
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").hide();
+    $("#LTC-Tab").show();
+})
 
