@@ -48,6 +48,7 @@ function runQuery() {
         $('#Over-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
     });
 
+    console.log('hey');
     }
 
 
@@ -59,14 +60,21 @@ $(document).ready(function() {
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
     $("#LTC-Tab").hide();
+
+    $(document).on('click', '#Over-Btn', function(){
+        runQuery();
+        $('#Over-Tab').show();
+        $("#BTC-Tab").hide();
+        $("#ETH-Tab").hide();
+        $("#LTC-Tab").hide();
+    })
 });
 
-$('#Over-Btn').click(function(){
-    $('#Over-Tab').show();
-    $("#BTC-Tab").hide();
-    $("#ETH-Tab").hide();
-    $("#LTC-Tab").hide();
-})
+setInterval(function(){
+    runQuery();
+    console.log(BTC_Val)
+}, 20000);
+
 
 $('#BTC-Btn').click(function(){
     $('#BTC-USD').html('<h2>$ '+ BTC_Val + '</h2>');

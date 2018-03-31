@@ -31,7 +31,7 @@ html,body {
 
 #dashBtn:hover,#settingsBtn:hover,.cryptoBtn:hover {
     background-color: steelblue;
-    color: whitesmoke;
+    color: whitesmoke !important;
 }
 
 .cryptoBtn-2:hover {
