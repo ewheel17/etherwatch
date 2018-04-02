@@ -60,14 +60,6 @@ $(document).ready(function() {
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
     $("#LTC-Tab").hide();
-
-    $(document).on('click', '#Over-Btn', function(){
-        runQuery();
-        $('#Over-Tab').show();
-        $("#BTC-Tab").hide();
-        $("#ETH-Tab").hide();
-        $("#LTC-Tab").hide();
-    })
 });
 
 setInterval(function(){
