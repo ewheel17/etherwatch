@@ -30,7 +30,7 @@ function runQuery() {
     }).then(function(coinData) {
         BTC_Val = coinData.data.amount;
         $('#spread-BTC').html('<h5>Bitcoin: $' + coinData.data.amount + '</h5>')
-        $('#button-BTC').html('$' + coinData.data.amount)
+        $('#price-BTC').html('$' + coinData.data.amount)
         $('#BTC-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
 
@@ -40,7 +40,8 @@ function runQuery() {
     }).then(function(coinData) {
         ETH_Val = coinData.data.amount;
         $('#spread-ETH').html('<h5>Etherium: $' + coinData.data.amount + '</h5>' )
-        $('#button-ETH').html('$' + coinData.data.amount)
+        $('#price-ETH').html('$' + coinData.data.amount)
+        $('#ETH-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
 
     $.ajax({ 
@@ -49,7 +50,8 @@ function runQuery() {
     }).then(function(coinData) {
         LTC_Val = coinData.data.amount;
         $('#spread-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
-        $('#button-LTC').html('$' + coinData.data.amount)
+        $('#price-LTC').html('$' + coinData.data.amount)
+        $('#LTC-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
 }
 
@@ -72,7 +74,14 @@ setInterval(function(){
     console.log(BTC_Val);
 }, 20000);
 
-$('#Over-Btn').click(function(){
+$('.Over-Btn').click(function(){
+    $('#Over-Tab').fadeIn();
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").hide();
+    $("#LTC-Tab").hide();
+})
+
+$('.returnOver').click(function(){
     $('#Over-Tab').fadeIn();
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
@@ -87,7 +96,6 @@ $('.BTC-Btn').click(function(){
 })
 
 $('.ETH-Btn').click(function(){
-    $('#ETH-USD').html('<h2>$ '+ ETH_Val + '</h2>')
     $('#Over-Tab').hide();
     $("#BTC-Tab").hide();
     $("#ETH-Tab").fadeIn();
@@ -95,7 +103,6 @@ $('.ETH-Btn').click(function(){
 })
 
 $('.LTC-Btn').click(function(){
-    $('#LTC-USD').html('<h2>$ '+ LTC_Val + '</h2>')
     $('#Over-Tab').hide();
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();

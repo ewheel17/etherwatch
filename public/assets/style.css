@@ -15,6 +15,14 @@ main.hidden, section.hidden {
     color: whitesmoke;
 }
 
+#theFoot {
+    background-color: #6c5ce7;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top:50%;
+}
+
 #brand-link {
     color: whitesmoke;
     margin-left: 5%;
@@ -54,17 +62,18 @@ main.hidden, section.hidden {
 }
 
 #plusSign {
-    height:20px
+    height:15px;
+    margin-bottom:5px;
+    margin-left:50px;
 }
 
-#button-BTC, #button-ETH, #button-LTC {
-    border-radius: 50%;
+.inside-style {
+    border-radius: 10%;
     background-color: whitesmoke;
     color: grey;
     font-size: 25px;
     font-weight: 600;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 0px 5px;
 }
 
 ul {
@@ -116,7 +125,7 @@ a:hover {
 }
 
 .btnCoin {
-    height: 150px;
+    height: 200px;
     padding: 10px;
     margin-bottom:30px;
     border-radius: 10%;
@@ -131,5 +140,30 @@ a:hover {
 .btnCoin:hover {
     opacity: 1.0;
     transition: .3s;
+    cursor: pointer;
+}
+
+.BTC-Btn {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.BTC-Btn:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.returnOver:hover {
+    cursor: pointer;
+}
+
+.fa-cog {
+    color: #00b894 !important;
 }
 
