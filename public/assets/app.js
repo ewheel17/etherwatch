@@ -29,7 +29,9 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         BTC_Val = coinData.data.amount;
-        $('#Over-BTC').html('<h5>Bitcoin: $' + coinData.data.amount + '</h5>')
+        $('#spread-BTC').html('<h5>Bitcoin: $' + coinData.data.amount + '</h5>')
+        $('#button-BTC').html('$' + coinData.data.amount)
+        $('#BTC-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
 
     $.ajax({ 
@@ -37,7 +39,8 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         ETH_Val = coinData.data.amount;
-        $('#Over-ETH').html('<h5>Etherium: $' + coinData.data.amount + '</h5>' )
+        $('#spread-ETH').html('<h5>Etherium: $' + coinData.data.amount + '</h5>' )
+        $('#button-ETH').html('$' + coinData.data.amount)
     });
 
     $.ajax({ 
@@ -45,11 +48,10 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         LTC_Val = coinData.data.amount;
-        $('#Over-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
+        $('#spread-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
+        $('#button-LTC').html('$' + coinData.data.amount)
     });
-
-    console.log('hey');
-    }
+}
 
 
 
@@ -60,35 +62,52 @@ $(document).ready(function() {
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
     $("#LTC-Tab").hide();
+    $('#cryptoTab').fadeIn('fast');
+    $("#Over-Tab").fadeIn('slow');
+    $("#spreadView").hide();
 });
 
 setInterval(function(){
     runQuery();
-    console.log(BTC_Val)
+    console.log(BTC_Val);
 }, 20000);
 
-
-$('#BTC-Btn').click(function(){
-    $('#BTC-USD').html('<h2>$ '+ BTC_Val + '</h2>');
-    $('#Over-Tab').hide();
-    $("#BTC-Tab").show();
+$('#Over-Btn').click(function(){
+    $('#Over-Tab').fadeIn();
+    $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
     $("#LTC-Tab").hide();
 })
 
-$('#ETH-Btn').click(function(){
-    $('#ETH-USD').html('<h2>$ '+ ETH_Val + '</h2>')
+$('.BTC-Btn').click(function(){
     $('#Over-Tab').hide();
-    $("#BTC-Tab").hide();
-    $("#ETH-Tab").show();
+    $("#BTC-Tab").fadeIn();
+    $("#ETH-Tab").hide();
     $("#LTC-Tab").hide();
 })
 
-$('#LTC-Btn').click(function(){
+$('.ETH-Btn').click(function(){
+    $('#ETH-USD').html('<h2>$ '+ ETH_Val + '</h2>')
+    $('#Over-Tab').hide();
+    $("#BTC-Tab").hide();
+    $("#ETH-Tab").fadeIn();
+    $("#LTC-Tab").hide();
+})
+
+$('.LTC-Btn').click(function(){
     $('#LTC-USD').html('<h2>$ '+ LTC_Val + '</h2>')
     $('#Over-Tab').hide();
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
-    $("#LTC-Tab").show();
+    $("#LTC-Tab").fadeIn();
 })
 
+$('#buttonViewShow').click(function(){
+    $("#buttonView").fadeIn();
+    $("#spreadView").hide();
+})
+
+$('#spreadViewShow').click(function(){
+    $("#buttonView").hide();
+    $("#spreadView").fadeIn();
+})

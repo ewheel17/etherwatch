@@ -22,36 +22,75 @@
 
     <header class="container-flex text-center">
         <div class="btn-group btn-block">
-            <a href="" class="btn btn-block" id="dashBtn"><h5>Dashboard</h5></a>
-            <a href="" class="btn btn-block" id="settingsBtn"><h5>Settings</h5></a>
+            <a href="index.html" class="btn btn-block" id="dashBtn"><h5>Dashboard</h5></a>
+            <a href="" class="btn btn-block" id="settingsBtn"><h5>Manage Transactions</h5></a>
         </div>
     </header>
 
     <!-- <h5>Your one stop to everything Cryptocurrency. From the customizable dashboard to 
             transaction storing, we have you covered.</h5> -->
 
-    <main class="container-flex" id="cryptoTab">
+    <main class="container-flex hidden" id="cryptoTab">
         <div class="btn-group btn-block" id="allCrypts">
             <a class="btn btn-block cryptoBtn" id="Over-Btn"><h5>Overview</h5></a>
-            <a class="btn btn-block cryptoBtn" id="BTC-Btn"><h5>Bitcoin</h5></a>
-            <a class="btn btn-block cryptoBtn" id="ETH-Btn"><h5>Ethereum</h5></a>
-            <a class="btn btn-block cryptoBtn" id="LTC-Btn"><h5>Litecoin</h5></a>
+            <a class="btn btn-block cryptoBtn BTC-Btn"><h5>Bitcoin</h5></a>
+            <a class="btn btn-block cryptoBtn ETH-Btn"><h5>Ethereum</h5></a>
+            <a class="btn btn-block cryptoBtn LTC-Btn"><h5>Litecoin</h5></a>
             <a class="btn btn-block cryptoBtn-2" id=""><img id="plusSign" src="assets/images/plus-sign.png"></a>
         </div>
 
-        <section class="row pl-3" id="Over-Tab">
+        <section class="row pl-3 hidden" id="Over-Tab">
             <div class="col-lg-12">
-                <h3>Overview</h3>
+                <h3>Overview
+                    <a class="btn btn-default addBtn" id="buttonViewShow">
+                        <small>Button View</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="spreadViewShow">
+                        <small>Spreadsheet View</small>
+                    </a>
+                </h3>
                 <hr>
-                <div id="Over-BTC"></div>
-                <div id="Over-ETH"></div>
-                <div id="Over-LTC"></div>
+                <div class="" id="spreadView">
+                    <div id="spread-BTC"></div>
+                    <div id="spread-ETH"></div>
+                    <div id="spread-LTC"></div>
+                </div>
+
+                <div class="row justify-content-around text-center" id="buttonView">
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin BTC-Btn">
+                        <h3>Bitcoin</h3>
+                        <hr>
+                        <h6>Price per:
+                            <span class="" id="button-BTC"></span>
+                        </h6>
+                    </button>
+
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin ETH-Btn">
+                        <h3>Etherium</h3>
+                        <hr>
+                        <h6>Price per:
+                            <span class="" id="button-ETH"></span>
+                        </h6>
+                    </button>
+
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin LTC-Btn">
+                        <h3>Litecoin</h3>
+                        <hr>
+                        <h6>Price per:
+                            <span class="" id="button-LTC"></span>
+                        </h6>
+                    </button>
+                </div>
             </div>
         </section>
 
         <section class="row pl-3" id="BTC-Tab">
             <div class="col-lg-12">
-                <h3>Bitcoin</h3>
+                <h3>Bitcoin 
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                </h3>
                 <hr>
                 <div id="BTC-USD"></div>
             </div>
@@ -59,7 +98,11 @@
 
         <section class="row pl-3" id="ETH-Tab">
             <div class="col-lg-12">
-                <h3>Ethereum</h3>
+                <h3>Ethereum
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                </h3>
                 <hr>
                 <span id="ETH-USD"></span>
             </div>
@@ -67,7 +110,11 @@
 
         <section class="row pl-3" id="LTC-Tab">
             <div class="col-lg-12">
-                <h3>Litecoin</h3>
+                <h3>Litecoin
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                </h3>
                 <hr>
                 <div id="LTC-USD"></div>
             </div>

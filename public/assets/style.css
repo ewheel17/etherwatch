@@ -6,6 +6,10 @@ html,body {
     overflow-x: hidden; 
 }
 
+main.hidden, section.hidden {
+    display: none;
+}
+
 #navPiece {
     background-color: #6c5ce7;
     color: whitesmoke;
@@ -30,7 +34,7 @@ html,body {
 }
 
 #dashBtn:hover,#settingsBtn:hover,.cryptoBtn:hover {
-    background-color: steelblue;
+    background-color: #b2bec3;
     color: whitesmoke !important;
 }
 
@@ -53,8 +57,22 @@ html,body {
     height:20px
 }
 
+#button-BTC, #button-ETH, #button-LTC {
+    border-radius: 50%;
+    background-color: whitesmoke;
+    color: grey;
+    font-size: 25px;
+    font-weight: 600;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 ul {
     list-style-type: none;
+}
+
+button:focus {
+    outline: 0;
 }
 
 a {
@@ -84,5 +102,34 @@ a:hover {
     margin: 0 !important;
     border-radius: 0;
     width:15%
+}
+
+.addBtn {
+    padding:0px 5px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+.addBtn:hover {
+    background-color: #6c5ce7;
+    color: whitesmoke !important;
+}
+
+.btnCoin {
+    height: 150px;
+    padding: 10px;
+    margin-bottom:30px;
+    border-radius: 10%;
+    background-color: #00b894;
+    color: white !important;
+    min-width: 225px;
+    border:none;
+    outline: none;
+    opacity: .9;
+}
+
+.btnCoin:hover {
+    opacity: 1.0;
+    transition: .3s;
 }
 
