@@ -29,7 +29,7 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         BTC_Val = coinData.data.amount;
-        $('#spread-BTC').html('<h5>Bitcoin: $' + coinData.data.amount + '</h5>')
+        $('#spread-BTC').html(coinData.data.amount)
         $('#price-BTC').html('$' + coinData.data.amount)
         $('#BTC-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
@@ -39,7 +39,7 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         ETH_Val = coinData.data.amount;
-        $('#spread-ETH').html('<h5>Etherium: $' + coinData.data.amount + '</h5>' )
+        $('#spread-ETH').html(coinData.data.amount)
         $('#price-ETH').html('$' + coinData.data.amount)
         $('#ETH-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });
@@ -49,7 +49,7 @@ function runQuery() {
         method: "GET" 
     }).then(function(coinData) {
         LTC_Val = coinData.data.amount;
-        $('#spread-LTC').html('<h5>Litecoin: $' + coinData.data.amount + '</h5>' )
+        $('#spread-LTC').html(coinData.data.amount)
         $('#price-LTC').html('$' + coinData.data.amount)
         $('#LTC-USD').html('<h2>$ '+ coinData.data.amount + '</h2>');
     });

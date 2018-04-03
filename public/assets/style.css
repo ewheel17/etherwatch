@@ -167,3 +167,7 @@ a:hover {
     color: #00b894 !important;
 }
 
+.bg-green{
+    background-color: #00b894;
+    color: whitesmoke !important;
+}

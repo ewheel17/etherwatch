@@ -42,23 +42,51 @@
         </div> -->
 
         <section class="row pl-3 hidden" id="Over-Tab">
-            <div class="col-lg-12 pt-3">
-                <h3>Overview
+            <div class="col-lg-12 pt-3 pl-0">
+                <h3 class="pl-3">Overview
                     <a class="btn btn-default addBtn" id="buttonViewShow">
                         <small>Button View</small>
                     </a>
                     <a class="btn btn-default addBtn" id="spreadViewShow">
                         <small>Spreadsheet View</small>
                     </a>
-                    <a class="btn btn-default addBtn" id="addCrypto">
+                    <a class="btn btn-default addBtn" id="">
                         <small>Add Cryptocurrency</small>
                     </a>
                 </h3>
                 <hr>
                 <div class="" id="spreadView">
-                    <div id="spread-BTC"></div>
-                    <div id="spread-ETH"></div>
-                    <div id="spread-LTC"></div>
+                    <table class="table">
+                        <thead class="bg-green">
+                            <tr>
+                                <th scope="col">Cryptocurrency</th>
+                                <th scope="col">Price Per ($)</th>
+                                <th scope="col">Amount Owned</th>
+                                <th scope="col">Your Bank ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Bitcoin</th>
+                                <td id="spread-BTC"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Etherium</th>
+                                <td id="spread-ETH"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Litecoin</th>
+                                <td id="spread-LTC"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="row justify-content-around text-center" id="buttonView">
@@ -114,6 +142,9 @@
                     <a class="btn btn-default addBtn" id="">
                         <small>Add Transaction</small>
                     </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
+                    </a>
                 </h3>
                 <hr>
                 <div id="BTC-USD"></div>
@@ -130,6 +161,9 @@
                     <a class="btn btn-default addBtn" id="">
                         <small>Add Transaction</small>
                     </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
+                    </a>
                 </h3>
                 <hr>
                 <span id="ETH-USD"></span>
@@ -145,6 +179,9 @@
                     Litecoin
                     <a class="btn btn-default addBtn" id="">
                         <small>Add Transaction</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
                     </a>
                 </h3>
                 <hr>
