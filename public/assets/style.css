@@ -189,7 +189,7 @@ a:hover {
 }
 
 #loginBox2 {
-    min-width: 234px !important;
+    min-width: 300px !important;
     
 }
 
@@ -198,7 +198,12 @@ a:hover {
 }
 
 #loginBox h1 {
-    font-size: 80px;
+    font-size: 65px;
+    font-weight: 600 !important;
+}
+
+#modalCustom {
+    background: #b2bec3;
 }
 
 .form-customization {
@@ -207,7 +212,7 @@ a:hover {
     background: whitesmoke !important;
 }
 
-.form-btn-customization {
+.form-btn-customization, .form-modal-customization {
     width: 50%;
     background: #00b894;
     border:none;
@@ -215,6 +220,11 @@ a:hover {
     color: whitesmoke;
 }
 
-.form-btn-customization:hover {
+.form-modal-customization {
+    width:100%;
+}
+
+.form-btn-customization:hover, .form-modal-customization:hover {
     background: #6c5ce7;
 }
+
