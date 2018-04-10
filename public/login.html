@@ -17,35 +17,51 @@
 
 </head>
 <body id="logBod">
-    
-    <main class="container" id="loginBox">
-        <div class="text-center">
-            <h1>Etherfeld Login</h1>
-            <hr>
-        
-            <div class="text-left">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-check my-2">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Receive Feature Updates</label>
-                </div>
-                <div class="mb-3">
-                    <!-- MAKE A MODAL HERE TO INPUT INFORMATION -->
-                    <a href="">Create New Account</a>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+
+    <main id="loginBox">
+        <div class="text-center col-4" id="loginBox2">
+            <h1>Etherfeld</h1>
+            <section class="text-left">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-customization" id="email-input" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="form-group mb-4">    
+                        <input type="password" class="form-control form-customization" id="password-input" placeholder="Password">
+                    </div>
+                    <div class="btn-group btn-block">
+                        <button type="submit" class="btn btn-block form-btn-customization" id="submit-auth">
+                            Login
+                        </button>
+                        <button type="button" class="btn btn-block form-btn-customization ml-2" data-toggle="modal" data-target="#signUpModal">
+                            Sign Up
+                        </button>
+                    </div>
+                </form>
+            </section>
         </div>
     </main>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

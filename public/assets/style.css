@@ -34,25 +34,6 @@ main.hidden, section.hidden {
     background-color: rgb(224, 224, 224);
 }
 
-#logBod {
-    background-color: #6c5ce7;
-}
-
-#loginBox {
-    background-color: whitesmoke;
-    margin-top: 10%;
-    width: 40%;
-    height: 60%;
-    border: #00b894 solid 2px;
-    border-radius: 2%;
-    color: grey;
-    font-family: 'Mandali', sans-serif;
-}
-
-#loginBox h1, label {
-    color: #00b894;
-}
-
 #dashBtn,#settingsBtn {
     background-color: whitesmoke;
     padding: 10px;
@@ -189,4 +170,51 @@ a:hover {
 .bg-green{
     background-color: #00b894;
     color: whitesmoke !important;
+}
+
+/*********************************/
+/****** Login-Page specific ******/
+/*********************************/
+
+#logBod {
+    background-color: grey;
+}
+
+#loginBox {
+    font-family: 'Mandali', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+#loginBox2 {
+    min-width: 234px !important;
+    
+}
+
+#loginBox h1, label {
+    color: #00b894;
+}
+
+#loginBox h1 {
+    font-size: 80px;
+}
+
+.form-customization {
+    height: 60px;
+    font-size: 18px;
+    background: whitesmoke !important;
+}
+
+.form-btn-customization {
+    width: 50%;
+    background: #00b894;
+    border:none;
+    margin-top: 0px !important;
+    color: whitesmoke;
+}
+
+.form-btn-customization:hover {
+    background: #6c5ce7;
 }
