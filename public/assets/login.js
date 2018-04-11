@@ -14,10 +14,10 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 $("#initialSignUp").on("click", () => {
-  var firstName = ;
-  var lastName = ;
-  var email = ;
-  var password = ;
+  // var firstName = ;
+  // var lastName = ;
+  // var email = ;
+  // var password = ;
   
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
       // Handle Errors here.
@@ -40,6 +40,7 @@ $("#submit-auth").on("click", function(event){
     var errorCode = error.code;
     var errorMessage = error.message;
   
+    // window.location.replace("../index.html");
     });
   
     //Auth Check
@@ -50,13 +51,17 @@ $("#submit-auth").on("click", function(event){
     });
 });
 
-// //Auth Check & User Log
-// var pathname = window.location.pathname;
+$(document).ready( () => {
+  //Auth Check & User Log
+  var pathname = window.location.pathname;
 
-// if (pathname != "/index.html") {
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     if (user) {} else {
-//       window.location.replace("../index.html");
-//     }
-//   });
-// }
+
+  // firebase.auth().onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     window.location.replace("../index.html")
+  //   } else {
+  //     window.location.replace("../login.html");
+  //   }
+  // });
+});
+

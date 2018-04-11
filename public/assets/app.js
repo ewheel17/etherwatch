@@ -10,6 +10,13 @@ var config = {
 
 firebase.initializeApp(config);
 
+$("#signOutButton").on("click", () => {
+    firebase.auth().signOut().then( () => {
+        window.location.replace("../login.html");
+        localStorage.clear();
+    });
+});
+
 var currencies = [
     'BTC-USD',
     'ETH-USD',
@@ -118,3 +125,5 @@ $('#spreadViewShow').click(function(){
     $("#buttonView").hide();
     $("#spreadView").fadeIn();
 })
+
+
