@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 $("#signOutButton").on("click", () => {
     firebase.auth().signOut().then( () => {
         window.location.replace("../login.html");
-        localStorage.clear();
+        localStorage.clear();   
     });
 });
 
@@ -126,4 +126,14 @@ $('#spreadViewShow').click(function(){
     $("#spreadView").fadeIn();
 })
 
+var pathname = window.location.pathname;
+
+if (pathname != "/login.html") {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    } else {
+      window.location.replace("../login.html");
+    }
+  });
+}
 

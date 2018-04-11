@@ -51,17 +51,14 @@ $("#submit-auth").on("click", function(event){
     });
 });
 
-$(document).ready( () => {
-  //Auth Check & User Log
-  var pathname = window.location.pathname;
+var pathname = window.location.pathname;
 
+if (pathname != "/login.html") {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {} else {
+       window.location.replace("../login.html");
+     }
+  });
+}
 
-  // firebase.auth().onAuthStateChanged(function(user) {
-  //   if (user) {
-  //     window.location.replace("../index.html")
-  //   } else {
-  //     window.location.replace("../login.html");
-  //   }
-  // });
-});
 

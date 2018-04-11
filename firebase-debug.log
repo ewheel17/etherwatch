@@ -1,41 +1,32 @@
-[debug] [2018-04-10T23:35:18.243Z] ----------------------------------------------------------------------
-[debug] [2018-04-10T23:35:18.246Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ewhee\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-10T23:35:18.246Z] CLI Version:   3.18.2
-[debug] [2018-04-10T23:35:18.246Z] Platform:      win32
-[debug] [2018-04-10T23:35:18.246Z] Node Version:  v8.9.3
-[debug] [2018-04-10T23:35:18.246Z] Time:          Tue Apr 10 2018 17:35:18 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:18.246Z] ----------------------------------------------------------------------
+[debug] [2018-04-11T01:06:25.681Z] ----------------------------------------------------------------------
+[debug] [2018-04-11T01:06:25.696Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ewhee\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-11T01:06:25.696Z] CLI Version:   3.18.2
+[debug] [2018-04-11T01:06:25.696Z] Platform:      win32
+[debug] [2018-04-11T01:06:25.696Z] Node Version:  v8.9.3
+[debug] [2018-04-11T01:06:25.696Z] Time:          Tue Apr 10 2018 19:06:25 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-04-11T01:06:25.696Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-10T23:35:18.261Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-10T23:35:18.269Z] > authorizing via signed-in user
-[debug] [2018-04-10T23:35:18.271Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-04-10T23:35:18.272Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/FvPfhERZbTrZbaQG99P2riPhXbEZMkiFHhopbzCo4qXW3qfb3LlcghrcBX2gshby',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Tue Apr 10 2018 17:35:18 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:18.549Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-10T23:35:18.597Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/etherwatch-1659d  
+[debug] [2018-04-11T01:06:25.696Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-11T01:06:25.696Z] > authorizing via signed-in user
+[debug] [2018-04-11T01:06:25.712Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/etherwatch-1659d  
   
- Tue Apr 10 2018 17:35:18 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:19.345Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-10T23:35:19.349Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/etherwatch-1659d/tokens  
+ Tue Apr 10 2018 19:06:25 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-04-11T01:06:26.092Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T01:06:26.092Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/etherwatch-1659d/tokens  
   
- Tue Apr 10 2018 17:35:19 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:19.725Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-10T23:35:19.725Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/etherwatch-1659d  
+ Tue Apr 10 2018 19:06:26 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-04-11T01:06:26.573Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T01:06:26.574Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/etherwatch-1659d  
   
- Tue Apr 10 2018 17:35:19 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:20.285Z] <<< HTTP RESPONSE 200
+ Tue Apr 10 2018 19:06:26 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-04-11T01:06:27.038Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\ewhee\Documents\GitHub\personal_projects\etherwatch'...
 [info] 
-[debug] [2018-04-10T23:35:20.292Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/595784562003/clients/_:getWebAppConfig  
+[debug] [2018-04-11T01:06:27.047Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/595784562003/clients/_:getWebAppConfig  
   
- Tue Apr 10 2018 17:35:20 GMT-0600 (Mountain Daylight Time)
-[debug] [2018-04-10T23:35:21.123Z] <<< HTTP RESPONSE 200
+ Tue Apr 10 2018 19:06:27 GMT-0600 (Mountain Daylight Time)
+[debug] [2018-04-11T01:06:27.477Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 
