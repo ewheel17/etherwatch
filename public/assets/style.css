@@ -71,13 +71,13 @@ main.hidden, section.hidden {
     margin-left:50px;
 }
 
-#signOutButton {
+.logButton {
     background: #6c5ce7;
     color: white;
     border: 2px solid #00b894; 
 }
 
-#signOutButton:hover {
+.logButton:hover {
     background: white;
     color: #6c5ce7;
 }
@@ -185,6 +185,35 @@ a:hover {
 .bg-green{
     background-color: #00b894;
     color: whitesmoke !important;
+}
+/*********************************/
+/****** Landing-Page specific ****/
+/*********************************/
+
+#landBod {
+    font-family: 'Mandali', sans-serif;
+    color: grey;
+    background-color: #00b894;
+}
+
+.landWhite {
+    background: whitesmoke;
+    color: black;
+    min-height: 400px;
+    max-height:500px;
+    padding:10%;
+}
+
+.landGreen {
+    color: white;
+    min-height: 400px;
+    max-height:500px;
+    padding:40px;
+}
+
+.hrSmall {
+    min-width: 200px;
+    max-width: 600px;
 }
 
 /*********************************/
