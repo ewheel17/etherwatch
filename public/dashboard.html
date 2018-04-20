@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Etherfeld</title>
+    <link rel="shortcut icon" href="assets/images/wheat_fav.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Mandali" rel="stylesheet">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+</head>
+<body id="theBod">
+
+    <nav class="navbar navbar-expand-lg justify-content-between" id="navPiece">
+        <a class="navbar-brand" id="brand-link" href="#"><h2>Etherfeld</h2></a>
+
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn logButton" type="submit" id="signOutButton">Sign Out</button>
+        </form>
+    </nav>
+
+    <header class="container-flex text-center">
+        <div class="btn-group btn-block">
+            <a href="index.html" class="btn btn-block" id="dashBtn"><h5>Dashboard</h5></a>
+            <a href="" class="btn btn-block" id="settingsBtn"><h5>Manage Transactions</h5></a>
+        </div>
+    </header>
+
+    <!-- <h5>Your one stop to everything Cryptocurrency. From the customizable dashboard to 
+            transaction storing, we have you covered.</h5> -->
+
+    <main class="container-fluid hidden" id="cryptoTab">
+        <section class="row pl-3 hidden" id="Over-Tab">
+            <div class="col-lg-12 pt-3 pl-0">
+                <div>
+                <h3 class="pl-3">Overview
+                    <a class="btn btn-default addBtn" id="buttonViewShow">
+                        <small>Button View</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="spreadViewShow">
+                        <small>Spreadsheet View</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Cryptocurrency</small>
+                    </a>
+                </h3>
+                </div>
+                <hr>
+                <div class="" id="spreadView">
+                    <table class="table">
+                        <thead class="bg-green">
+                            <tr>
+                                <th scope="col">Cryptocurrency</th>
+                                <th scope="col">Price Per ($)</th>
+                                <th scope="col">Amount Owned</th>
+                                <th scope="col">Your Bank ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Bitcoin</th>
+                                <td id="spread-BTC"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Etherium</th>
+                                <td id="spread-ETH"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Litecoin</th>
+                                <td id="spread-LTC"></td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row justify-content-around text-center" id="buttonView">
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin BTC-Btn">
+                        <h3>Bitcoin</h3>
+                        <hr>
+                        <div class="text-left pl-2">
+                            <h6 class="mb-4">Price Per:
+                                <span class="inside-style" id="price-BTC"></span>
+                            </h6>
+                            <h6>Your Bank:
+                                <span class="inside-style" id="">$0</span>
+                            </h6>
+                        </div>
+                    </button>
+
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin ETH-Btn">
+                        <h3>Etherium</h3>
+                        <hr>
+                        <div class="text-left pl-2">
+                            <h6 class="mb-4">Price Per:
+                                <span class="inside-style" id="price-ETH"></span>
+                            </h6>
+                            <h6>Your Bank:
+                                <span class="inside-style" id="">$0</span>
+                            </h6>
+                        </div>
+                    </button>
+
+                    <button class="col-md-2 col-sm-5 col-8 btnCoin LTC-Btn">
+                        <h3>Litecoin</h3>
+                        <hr>
+                        <div class="text-left pl-2">
+                            <h6 class="mb-4">Price Per:
+                                <span class="inside-style" id="price-LTC"></span>
+                            </h6>
+                            <h6>Your Bank:
+                                <span class="inside-style" id="">$0</span>
+                            </h6>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="BTC-Tab">
+            <div class="col-lg-12 pt-3">
+                <h3>
+                    <span class="returnOver fa-cog">
+                        <button class="fas fa-chevron-left"></button>
+                    </span>
+                    Bitcoin
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
+                    </a>
+                </h3>
+                <hr>
+                <div id="BTC-USD"></div>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="ETH-Tab">
+            <div class="col-lg-12 pt-3">
+                <h3>
+                    <span class="returnOver fa-cog">
+                        <button class="fas fa-chevron-left"></button>
+                    </span>
+                    Ethereum
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
+                    </a>
+                </h3>
+                <hr>
+                <span id="ETH-USD"></span>
+            </div>
+        </section>
+
+        <section class="row pl-3" id="LTC-Tab">
+            <div class="col-lg-12 pt-3">
+                <h3>
+                    <span class="returnOver fa-cog">
+                        <button class="fas fa-chevron-left"></button>
+                    </span>
+                    Litecoin
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Add Transaction</small>
+                    </a>
+                    <a class="btn btn-default addBtn" id="">
+                        <small>Transaction History</small>
+                    </a>
+                </h3>
+                <hr>
+                <div id="LTC-USD"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="theFoot">
+        <small>Copyright &copy; Max Wheeler 2018</small>
+    </footer>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/app.js"></script>
+    
+</body>
+</html>
