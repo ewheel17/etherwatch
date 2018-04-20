@@ -128,7 +128,7 @@ $('#spreadViewShow').click(function(){
 
 var pathname = window.location.pathname;
 
-if (pathname != "/login.html" && pathname != "/index.html") {
+if (pathname === "/dashboard.html") {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     } else {

@@ -186,6 +186,10 @@ a:hover {
     background-color: #00b894;
     color: whitesmoke !important;
 }
+
+
+
+
 /*********************************/
 /****** Landing-Page specific ****/
 /*********************************/
@@ -193,13 +197,15 @@ a:hover {
 #landBod {
     font-family: 'Mandali', sans-serif;
     color: grey;
-    background-color: #74b9ff;
+    background-color: #636e72;
 }
 
 #landHead {
-    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #dfe6e9;
     height: auto;
-    justify-content: center;
     width: 100%;
 }
 
@@ -215,6 +221,8 @@ a:hover {
     position:relative;
     z-index:0;
     width: 100%;
+    height: 100%;
+    
 }
 
 .overlay {
@@ -222,12 +230,18 @@ a:hover {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: 100%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay div {
+    margin-top:18%;
 }
 
 .landWhite {
-    background: whitesmoke;
-    color: black;
+    color: white;
     min-height: 600px;
     max-height:700px;
     padding:12%;
@@ -245,12 +259,44 @@ a:hover {
     max-width: 600px;
 }
 
-/******** Coverr Graphic ********/
+.landImgBlock {
+    background: #b2bec3;
+}
+
+.landImg {
+    max-width: 400px;
+    min-width:50px;
+}
+
 @media screen and (min-width: 1920px) {
     video {
         width: 100vw;
         /* position:absolute; */
         object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #landHead h1 {
+        font-size: 40px;
+    }
+    #landHead h5 {
+        font-size: 18px;
+    }
+    .overlay div {
+        margin-top:18%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #landHead h1 {
+        font-size: 30px;
+    }
+    #landHead h5 {
+        font-size: 12px;
+    }
+    .overlay {
+        height: 98%;
     }
 }
 
@@ -272,6 +318,7 @@ a:hover {
 
 #loginBox2 {
     min-width: 300px !important;
+    text-align: center;
 }
 
 #loginBox h1, label {
