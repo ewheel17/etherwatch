@@ -2,15 +2,17 @@
   "name": "etherwatch",
   "version": "1.0.0",
   "description": "Cryptocurrency management website.",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "coinbase": "^2.0.7",
+    "express": "^4.16.3",
     "firebaseui": "^2.7.0",
+    "hbs": "^4.0.1",
     "inquirer": "^5.2.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
