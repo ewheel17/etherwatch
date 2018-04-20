@@ -61,4 +61,35 @@ if (pathname != "/login.html") {
   });
 }
 
+//Signup Script
+$("#ether-signup").on("click", function(event){
+  event.preventDefault();
 
+  var first_name = $("#first-name-signup").val();
+  var last_name = $("#last-name-signup").val();
+  var email = $("#email-signup").val();
+  var password = $("#password-signup").val();
+
+  if (email.length < 4) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  if (password.length < 4) {
+    alert('Passwords must contain more than 4 characters.');
+    return;
+  }
+
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+
+  //Auth Check
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location.replace("../dashboard.html");
+    }
+  });
+});
