@@ -1,0 +1,25 @@
+{
+  "name": "etherwatch",
+  "version": "1.0.0",
+  "description": "Cryptocurrency management website.",
+  "main": "app.js",
+  "dependencies": {
+    "coinbase": "^2.0.7",
+    "firebaseui": "^2.7.0",
+    "inquirer": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewheel17/etherwatch.git"
+  },
+  "author": "Max Wheeler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewheel17/etherwatch/issues"
+  },
+  "homepage": "https://github.com/ewheel17/etherwatch#readme"
+}
