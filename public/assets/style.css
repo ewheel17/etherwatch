@@ -24,7 +24,7 @@ main.hidden, section.hidden {
     color: whitesmoke;
     text-align: center;
     padding: 20px 0px;
-    margin-top:50%;
+    
 }
 
 #brand-link {
@@ -263,11 +263,6 @@ a:hover {
     background: #b2bec3;
 }
 
-.landImg {
-    max-width: 400px;
-    min-width:50px;
-}
-
 @media screen and (min-width: 1920px) {
     video {
         width: 100vw;
@@ -280,19 +275,20 @@ a:hover {
     #landHead h1 {
         font-size: 40px;
     }
-    #landHead h5 {
+    h5 {
         font-size: 18px;
     }
     .overlay div {
         margin-top:18%;
     }
+
 }
 
 @media screen and (max-width: 470px) {
     #landHead h1 {
         font-size: 30px;
     }
-    #landHead h5 {
+    h5 {
         font-size: 12px;
     }
     .overlay {

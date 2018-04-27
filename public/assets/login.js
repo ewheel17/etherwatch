@@ -19,7 +19,7 @@ $("#initialSignUp").on("click", () => {
   // var email = ;
   // var password = ;
   
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -29,13 +29,13 @@ $("#initialSignUp").on("click", () => {
 });
 
 //Login Auth
-$("#submit-auth").on("click", function(event){
+$("#submit-auth").on("click", event => {
     event.preventDefault();
   
     var email = $("#email-input").val().trim();
     var password = $("#password-input").val().trim();
   
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(error => {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -44,7 +44,7 @@ $("#submit-auth").on("click", function(event){
     });
   
     //Auth Check
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         window.location.replace("../dashboard.html");
       }
@@ -54,7 +54,7 @@ $("#submit-auth").on("click", function(event){
 var pathname = window.location.pathname;
 
 if (pathname != "/login.html") {
-  firebase.auth().onAuthStateChanged(function(user) {
+  firebase.auth().onAuthStateChanged( user => {
     if (user) {} else {
        window.location.replace("../login.html");
      }
@@ -62,7 +62,7 @@ if (pathname != "/login.html") {
 }
 
 //Signup Script
-$("#ether-signup").on("click", function(event){
+$("#ether-signup").on("click", event => {
   event.preventDefault();
 
   var first_name = $("#first-name-signup").val();
@@ -79,7 +79,7 @@ $("#ether-signup").on("click", function(event){
     return;
   }
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -87,7 +87,7 @@ $("#ether-signup").on("click", function(event){
   });
 
   //Auth Check
-  firebase.auth().onAuthStateChanged(function(user) {
+  firebase.auth().onAuthStateChanged(user => {
     if (user) {
       window.location.replace("../dashboard.html");
     }
