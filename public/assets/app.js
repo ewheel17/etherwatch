@@ -10,6 +10,7 @@ var config = {
 
 firebase.initializeApp(config);
 
+// Sign User out of account and relocate them.
 $("#signOutButton").on("click", () => {
     firebase.auth().signOut().then( () => {
         window.location.replace("../dashboard.html");
@@ -17,6 +18,7 @@ $("#signOutButton").on("click", () => {
     });
 });
 
+// List of Supported Currencies. Ability to add/remove currencies will be implemented in the future.
 var currencies = [
     'BTC-USD',
     'ETH-USD',
@@ -30,6 +32,7 @@ var BTC_Val;
 var ETH_Val;
 var LTC_Val;
 
+// Function for retrieving data from the selected API. Coinbase is currently hardcoded in. Will add more exchanges.
 function runQuery() {
     $.ajax({ 
         url: 'https://api.coinbase.com/v2/prices/' + currencies[0] + '/spot', 
@@ -63,10 +66,9 @@ function runQuery() {
 }
 
 
-
+// Initial bootup preferences and button functions.
 $(document).ready(function() {
     runQuery();
-    console.log('Get lost Alec!')
 
     $("#BTC-Tab").hide();
     $("#ETH-Tab").hide();
@@ -78,7 +80,6 @@ $(document).ready(function() {
 
 setInterval(function(){
     runQuery();
-    console.log(BTC_Val);
 }, 20000);
 
 $('.Over-Btn').click(function(){
@@ -126,6 +127,7 @@ $('#spreadViewShow').click(function(){
     $("#spreadView").fadeIn();
 })
 
+// Relocates the User if they arent authorized to be in the dashboard (not logged in).
 var pathname = window.location.pathname;
 
 if (pathname === "/dashboard.html") {
